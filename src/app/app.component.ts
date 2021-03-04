@@ -14,4 +14,15 @@ export class AppComponent {
   title: String = 'PIPES practice app';
   subtitle: String = 'I am practicing pipes in Angular';
   date = new Date(2021, 2, 4);
+
+  sendData = () => {
+    try {
+      throw new Error('This is send Error');
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+  getData = () => {
+    throw new Error('This is get error');
+  };
 }
